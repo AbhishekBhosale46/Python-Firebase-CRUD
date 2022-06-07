@@ -1,37 +1,12 @@
-# import streamlit as st
-# import streamlit_authenticator as sauth
-#
-# names = ['Teacher1','Teacher2']
-# usernames = ['teacher1','teacher2']
-# passwords = ['teacher1','teacher2']
-#
-# hashed_passwords = sauth.Hasher(passwords).generate()
-#
-# authenticator = sauth.Authenticate(names,usernames,hashed_passwords,
-#                 'some_cookie_name','some_signature_key',cookie_expiry_days=30)
-#
-# name, authentication_status, username = authenticator.login('Login','main')
-#
-# if st.session_state['authentication_status']:
-#     authenticator.logout('Logout', 'main')
-#     st.write('Welcome *%s*' % (st.session_state['name']))
-#     st.title('Some content')
-# elif st.session_state['authentication_status'] == False:
-#     st.error('Username/password is incorrect')
-# elif st.session_state['authentication_status'] == None:
-#     st.warning('Please enter your username and password')
-
 import pyrebase
 
 
-firebaseConfig = { 'apiKey': "AIzaSyAB2ZRlEuIueuyssEoU8v7vFo_i7NvwWkE",
-                   'authDomain': "pythonfirebase-f004f.firebaseapp.com",
-                   'databaseURL': "https://pythonfirebase-f004f-default-rtdb.firebaseio.com/",
-                   'projectId': "pythonfirebase-f004f",
-                   'storageBucket': "pythonfirebase-f004f.appspot.com",
-                   'messagingSenderId': "1092004919646",
-                   'appId': "1:1092004919646:web:11ab928d8c3e13561b37cf",
-                   'measurementId': "G-08VGHXL7XN"}
+firebaseConfig = config = {
+    "apiKey": "apiKey",
+    "authDomain": "projectId.firebaseapp.com",
+    "databaseURL": "https://databaseName.firebaseio.com",
+    "storageBucket": "projectId.appspot.com"
+}
 
 
 # --- INITIALIZE APP WITH GIVEN CONFIGURATIONS ---
